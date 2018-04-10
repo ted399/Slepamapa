@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slepa Mapa</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<!--MAPA-->
+
+
+    
+	<div id="nav">
+		<img  class="img-responsive logo" src="smlogo.png">
+    <ul>
+      <li><button class="menu-button">MĚSTA</button></li>
+      <li><button class="menu-button">STÁTY EVROPY</button></li>
+      <li><button class="menu-button">O PROJEKTU</button></li>
+    </ul>
+	</div>
+
+    <div class="container-right">
+    <!--OVERLAYS-->
+    <div id="gameover-overlay" class="parent">
+        <div class="child">
+            <p id="gameover-paragraph"></p>
+            <button class="restart-button">HRÁT ZNOVU</button>
+        </div>
+    </div>
+    <div id="success-alert-overlay">
+        <div class="success-alert">
+            <h1 class="alert-heading">Správně!</h1>
+            <button id="success-alert-button">DALŠÍ</button>
+        </div>
+    </div>
+    <div id="fail-alert-overlay">
+        <div class="fail-alert">
+            <h1 class="alert-heading">Špatně</h1>
+            <button onclick="document.getElementById('fail-alert-overlay').style.display='none';" id="fail-alert-button">DALŠÍ</button>
+        </div>
+    </div>
+    <!--END OF OVERLAYS-->
+    	<div class="otazka parent">
+	    	
+	    		<p class="child">Najdi: <span id="question"></p>
+		</div>
+    	<div class="score parent">
+    			<p class="child">Správně: <span id="spravne">0</p>	
+    			<p class="child">Špatně: <span id="spatne">0</p>	
+    	</div>
+    	<div id="map" class="child"></div>
+    	<div class="navod parent">
+    		<p class="child">Klikni tam, kde si myslíš, že se daná lokalita nachází. Až si budeš jistý, klikni na tlačítko POTVRĎ.</p>
+    	</div>
+    	<button id="start" value="Click" class="button">POTVRĎ</button>
+    </div>
+
+    <!--MOBILE-->
+    <div class="mobile-full parent">
+        <div class="child mobile-full-inner">
+            <img  class="logo-mobile" src="smlogo.png">
+            <p class="mobile-paragraph">Na mobilní verzi aplikace stále ještě pracujeme.<br>Pokud můžete, zvětšte okno prohlížeče a aplikace bude dostupná.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKBe4yPQN0GbayaWskCbjWjRJGWbXpyI4&libraries=geometry&callback=initMap">
+    </script>
+    
+    </script>
+    <script type="text/javascript" src="js/evropa.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
